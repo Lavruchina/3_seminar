@@ -1,0 +1,31 @@
+//задача №1. Напишите, программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
+
+Console.Write("Ввеите пятизначное число: ");
+string? n=Console.ReadLine();
+void CheckingN(string n)
+{
+    if(n[0]==n[4] || n[1]==n[3])
+    {
+        Console.WriteLine("Число является палиндромом");
+    }
+    else
+    Console.WriteLine("Число не является палиндромом");
+}
+if(n!.Length==5)
+{
+CheckingN(n);
+}
+else
+Console.WriteLine("Введено не пятизначное число");
+
+
+
+//задача №2. Напишите программу,  которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
+
+Console.Write("Введите число: ");
+    int N;
+    int i;
+    N=Convert.ToInt32(Console.ReadLine());
+    for (i=1; i<=N;  i++)
+Console.WriteLine(i*i*i);
+Console.ReadKey();
