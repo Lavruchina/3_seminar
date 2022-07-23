@@ -1,0 +1,31 @@
+//Задача №1.  Задайте значение N. Напишите программу, которая найдет кол-во цифр в числе N рекурсивным методом.
+
+using System;
+class RecExercise5
+    {
+        static void Main(string[] args)
+        {   
+        Console.Write(" Введите любое число : ");
+        int num = Convert.ToInt32(Console.ReadLine());           
+        Console.Write("\n В числе {0} количество цифр равно : {1} ",num,getDigits(num, 0));
+        Console.ReadLine();
+        }
+public static int getDigits(int n1, int nodigits)
+    {
+    if (n1 == 0)
+        return nodigits;
+    return getDigits(n1 / 10, ++nodigits);
+    }
+}
+
+
+//Задача №2.  Задайте значения M и N. Напишите программу, которая найдёт сумму натуральных элементов в промежутке от M до N.
+
+int N, M, s=0;
+Console.Write("Введи натуральное число M: ");
+M = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введи натуральное число N: ");
+N = Convert.ToInt32(Console.ReadLine());
+for (int i = M; i <= N; i++)
+    s += i;
+Console.Write($"Сумма элементов= {s} ");
